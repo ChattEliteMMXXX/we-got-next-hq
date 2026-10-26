@@ -1,6 +1,6 @@
 // HQ-only offline shell. Never intercepts Google Apps Script, Sheets or other linked tools.
-const CACHE = 'we-got-next-hq-v9-1';
-const ASSETS = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png'];
+const CACHE = 'we-got-next-hq-v9-2';
+const ASSETS = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png', './icons/2030-ce-x-watermark.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting()));
 });
